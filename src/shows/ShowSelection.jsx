@@ -3,6 +3,7 @@ import "./shows.css";
 /** A navbar that allows users to choose between a list of shows */
 export default function ShowSelection({
   shows,
+  selectedShow,
   setSelectedShow,
   setSelectedEpisode,
 }) {
@@ -11,7 +12,7 @@ export default function ShowSelection({
       {shows.map((show) => (
         <a
           key={show.name}
-          className="show"
+          className={`show ${selectedShow === show ? "selected" : ""}`}
           onClick={() => {
             setSelectedShow(show);
             setSelectedEpisode(null);

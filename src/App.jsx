@@ -18,6 +18,7 @@ export default function App() {
         <p>React TV</p>
         <ShowSelection
           shows={shows}
+          selectedShow={selectedShow}
           setSelectedShow={setSelectedShow}
           setSelectedEpisode={setSelectedEpisode}
         />
