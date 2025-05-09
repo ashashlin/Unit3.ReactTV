@@ -10,6 +10,7 @@ import { tvShows } from "./shows/data";
 export default function App() {
   const [shows] = useState(tvShows);
   const [selectedShow, setSelectedShow] = useState(null);
+  // Need to lift the state up to clear the previous episode when user clicks into a new show
   const [selectedEpisode, setSelectedEpisode] = useState(null);
 
   return (
