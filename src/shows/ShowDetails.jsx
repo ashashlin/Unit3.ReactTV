@@ -4,11 +4,9 @@ import EpisodeDetails from "../episodes/EpisodeDetails";
 import "./shows.css";
 
 /** Allows users to browse through the episodes of the given show */
-export default function ShowDetails({
-  selectedShow,
-  selectedEpisode,
-  setSelectedEpisode,
-}) {
+export default function ShowDetails({ selectedShow }) {
+  const [selectedEpisode, setSelectedEpisode] = useState(null);
+
   if (!selectedShow) {
     return <p>Please select a show to learn more.</p>;
   }

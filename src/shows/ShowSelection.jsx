@@ -5,7 +5,6 @@ export default function ShowSelection({
   shows,
   selectedShow,
   setSelectedShow,
-  setSelectedEpisode,
 }) {
   return (
     <nav className="shows">
@@ -15,7 +14,6 @@ export default function ShowSelection({
           className={`show ${selectedShow === show ? "selected" : ""}`}
           onClick={() => {
             setSelectedShow(show);
-            setSelectedEpisode(null);
           }}
         >
           {show.name}
